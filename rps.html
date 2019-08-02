@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+</head>
+<body>
+  <script>
+
+let computerScore = 0
+let userScore = 0
+var playerInput = prompt('type rock, paper or scisssors');
+var playerSelection = playerInput.toLowerCase();
+var computerSelection = computerPlay();
+
+function computerPlay() {
+var options = [ "rock", "paper", "scissors"];
+var index = Math.floor(Math.random() * options.length);
+return options[index];
+}
+
+function playRound(playerSelection, computerSelection) {
+if (playerSelection === computerSelection) {
+        console.log("you selected: " + playerSelection);
+        console.log("cpu selected: " + computerSelection);
+        console.log("it's a tie, hunty");
+}  else if (playerSelection == 'rock') {
+    switch (computerSelection) {
+      case 'paper':
+        console.log("you selected: " + playerSelection);
+        console.log("cpu selected: " + computerSelection);
+        console.log("You lose! Paper beats Rock");
+        computerScore++
+        break;
+      case 'scissors':
+        console.log("you selected: " + playerSelection);
+        console.log("cpu selected: " + computerSelection);
+        console.log("You win! rock beats scissors");
+        userScore++
+        break;
+    }
+} else if (playerSelection == 'paper') {
+    switch (computerSelection) {
+      case 'rock':
+        console.log("you selected: " + playerSelection);
+        console.log("cpu selected: " + computerSelection);
+        console.log("you win, paper beats rock");
+        userScore++
+        break;
+      case 'scissors':
+        console.log("you selected: " + playerSelection);
+        console.log("cpu selected: " + computerSelection);
+        console.log("you lose, scissors beat paper");
+        computerScore++
+        break;
+    }
+} else if (playerSelection == 'scissors') {
+    switch (computerSelection) {
+      case 'rock':
+        console.log("you selected: " + playerSelection);
+        console.log("cpu selected: " + computerSelection);
+        console.log("you lose, rock beats scissors");
+        computerScore++
+        break;
+      case 'paper':
+        console.log("you selected: " + playerSelection);
+        console.log("cpu selected: " + computerSelection);
+        console.log("you win, scissors beat paper");
+        userScore++
+        break;
+    }
+} 
+}
+
+
+playRound(playerSelection, computerSelection)
+
+
+</script>
+</body>
+</html> 
