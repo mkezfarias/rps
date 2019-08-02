@@ -5,10 +5,13 @@
 </head>
 <body>
   <script>
+    //this is the repeat game version of code
+
+
 let computerScore = 0
 let userScore = 0
-var playerInput = prompt('type rock, paper or scisssors');
-var playerSelection = playerInput.toLowerCase();
+//var playerInput = prompt('type rock, paper or scisssors');
+//var playerSelection = playerInput.toLowerCase();
 var computerSelection = computerPlay();
 
 function computerPlay() {
@@ -68,11 +71,26 @@ if (playerSelection === computerSelection) {
         break;
     }
 } 
+console.log('user score ' + userScore + ', cpu score ' + computerScore)
 }
 
 
-playRound(playerSelection, computerSelection)
-
+function repeatGame(){
+  for (var i = 0; i<5; i++) {
+  var playerInput = prompt('type rock, paper or scisssors');
+  var playerSelection = playerInput.toLowerCase();
+  var computerSelection = computerPlay();
+  playRound(playerSelection, computerSelection);
+}
+  if (userScore < computerScore) {
+    console.log('you are a loooooooser')
+  } else if (computerScore < userScore) {
+    console.log('you are a winner, baby')
+  } else { 
+    console.log('this is a super tie')
+  }
+}
+repeatGame()
 
 </script>
 </body>
