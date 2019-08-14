@@ -1,97 +1,47 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Page Title</title>
-</head>
-<body>
-  <script>
-//original version. it works... will add repeat game in new branch repeatgame
-    //this is the repeat game version of code merged into master branch
+  <head>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class='grid-container'>
+    <div class='item1'> <h1> Welcome to Rock Paper Scissors. <br>
+      Select one and play against the computer</h1>
+    </div>
 
-let computerScore = 0
-let userScore = 0
-//var playerInput = prompt('type rock, paper or scisssors');
-//var playerSelection = playerInput.toLowerCase();
-var computerSelection = computerPlay();
+    <div class='item2'>
+      <h2> Your Choice </h2>
+      <p id="chch"></p>
+    </div>
 
-function computerPlay() {
-var options = [ "rock", "paper", "scissors"];
-var index = Math.floor(Math.random() * options.length);
-return options[index];
-}
+    <div class='item2-5'>
+      <h2> Computers Choice</h2>
+      <p id="cpuch"></p>
 
-function playRound(playerSelection, computerSelection) {
-if (playerSelection === computerSelection) {
-        console.log("you selected: " + playerSelection);
-        console.log("cpu selected: " + computerSelection);
-        console.log("it's a tie, hunty");
-}  else if (playerSelection == 'rock') {
-    switch (computerSelection) {
-      case 'paper':
-        console.log("you selected: " + playerSelection);
-        console.log("cpu selected: " + computerSelection);
-        console.log("You lose! Paper beats Rock");
-        computerScore++
-        break;
-      case 'scissors':
-        console.log("you selected: " + playerSelection);
-        console.log("cpu selected: " + computerSelection);
-        console.log("You win! rock beats scissors");
-        userScore++
-        break;
-    }
-} else if (playerSelection == 'paper') {
-    switch (computerSelection) {
-      case 'rock':
-        console.log("you selected: " + playerSelection);
-        console.log("cpu selected: " + computerSelection);
-        console.log("you win, paper beats rock");
-        userScore++
-        break;
-      case 'scissors':
-        console.log("you selected: " + playerSelection);
-        console.log("cpu selected: " + computerSelection);
-        console.log("you lose, scissors beat paper");
-        computerScore++
-        break;
-    }
-} else if (playerSelection == 'scissors') {
-    switch (computerSelection) {
-      case 'rock':
-        console.log("you selected: " + playerSelection);
-        console.log("cpu selected: " + computerSelection);
-        console.log("you lose, rock beats scissors");
-        computerScore++
-        break;
-      case 'paper':
-        console.log("you selected: " + playerSelection);
-        console.log("cpu selected: " + computerSelection);
-        console.log("you win, scissors beat paper");
-        userScore++
-        break;
-    }
-} 
-console.log('user score ' + userScore + ', cpu score ' + computerScore)
-}
+    </div>
+
+    <div class='item3'>
+      <a id='imgrock' onclick='plSelect()'><img src='images/rps1.png'></a>
+      <a id='imgpaper' onclick='plSelect()'><img src='images/rps2.png'></a> 
+      <a id='imgscissors'onclick='plSelect()'><img src='images/rps3.png'></a>
+    </div>
+
+    <div class='item4'>
+      <img id='compsel' src='images/rps0.gif'>
+    </div>
+
+    <div class='item5'>
+      <button id='play' onclick='playRound(playerSelection, computerSelection)'>Play</h2>
+    </div>
+    <div class='item6'>
+      <p id='result'></p>
+    </div>
+    <div class='item7'>
+        <p id='result2'></p>
+      </div>
 
 
-function repeatGame(){
-  for (var i = 0; i<5; i++) {
-  var playerInput = prompt('type rock, paper or scisssors');
-  var playerSelection = playerInput.toLowerCase();
-  var computerSelection = computerPlay();
-  playRound(playerSelection, computerSelection);
-}
-  if (userScore < computerScore) {
-    console.log('you are a loooooooser')
-  } else if (computerScore < userScore) {
-    console.log('you are a winner, baby')
-  } else { 
-    console.log('this is a super tie')
-  }
-}
-repeatGame()
-
+<script src="rps.js">
 </script>
 </body>
 </html> 
