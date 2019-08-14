@@ -108,7 +108,7 @@ function timedImg() {
 }
 
 function replaceImg(){
-    document.getElementById('compsel').src='/images/rps0.gif';
+    document.getElementById('compsel').src='images/rps0.gif';
 }
 
 function finalResult(){
