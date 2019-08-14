@@ -37,13 +37,13 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
     document.getElementById("cpuch").innerHTML = computerSelection;
     document.getElementById("result").innerHTML = "it's a tie, hunty";
-    document.getElementById('compsel').src='/images/rps4.png'
+    document.getElementById('compsel').src='./images/rps4.png'
 
 }  else if (playerSelection == 'rock') {
     switch (computerSelection) {
       case 'paper':
         document.getElementById("cpuch").innerHTML = computerSelection;
-        document.getElementById('compsel').src='/images/rps2.png'
+        document.getElementById('compsel').src='./images/rps2.png'
         console.log("you selected: " + playerSelection);
         console.log("cpu selected: " + computerSelection);
         document.getElementById("result").innerHTML = "You lose! Paper beats Rock";
@@ -62,7 +62,7 @@ function playRound(playerSelection, computerSelection) {
     switch (computerSelection) {
       case 'rock':
         document.getElementById("cpuch").innerHTML = computerSelection;
-        document.getElementById('compsel').src='/images/rps1.png'
+        document.getElementById('compsel').src='./images/rps1.png'
         console.log("you selected: " + playerSelection);
         console.log("cpu selected: " + computerSelection);
         document.getElementById("result").innerHTML = "you win, paper beats rock";
@@ -71,7 +71,7 @@ function playRound(playerSelection, computerSelection) {
         break;
       case 'scissors':
         document.getElementById("cpuch").innerHTML = computerSelection;
-        document.getElementById('compsel').src='/images/rps3.png'
+        document.getElementById('compsel').src='./images/rps3.png'
         console.log("you selected: " + playerSelection);
         console.log("cpu selected: " + computerSelection);
         document.getElementById("result").innerHTML = "you lose, scissors beat paper";
@@ -82,7 +82,7 @@ function playRound(playerSelection, computerSelection) {
     switch (computerSelection) {
       case 'rock':
         document.getElementById("cpuch").innerHTML = computerSelection;
-        document.getElementById('compsel').src='/images/rps1.png'
+        document.getElementById('compsel').src='./images/rps1.png'
         console.log("you selected: " + playerSelection);
         console.log("cpu selected: " + computerSelection);
         document.getElementById("result").innerHTML = "you lose, rock beats scissors";
@@ -90,7 +90,7 @@ function playRound(playerSelection, computerSelection) {
         break;
       case 'paper':
         document.getElementById("cpuch").innerHTML = computerSelection;
-        document.getElementById('compsel').src='/images/rps2.png'
+        document.getElementById('compsel').src='./images/rps2.png'
         console.log("you selected: " + playerSelection);
         console.log("cpu selected: " + computerSelection);
         document.getElementById("result").innerHTML = "you win, scissors beat paper";
