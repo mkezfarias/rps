@@ -51,7 +51,7 @@ function playRound(playerSelection, computerSelection) {
         break;
       case 'scissors':
         document.getElementById("cpuch").innerHTML = computerSelection;
-        document.getElementById('compsel').src='/images/rps3.png'
+        document.getElementById('compsel').src='./images/rps3.png'
         console.log("you selected: " + playerSelection);
         console.log("cpu selected: " + computerSelection);
         document.getElementById("result").innerHTML = "You win! rock beats scissors";
